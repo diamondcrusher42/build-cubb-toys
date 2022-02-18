@@ -1,0 +1,37 @@
+footer#page-footer {
+    background: #202020;
+    height: 153px;
+    .container {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+    .logo {
+        height: 83px;
+        width: 83px;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    nav#footer-menu {
+        margin-left: 20px;
+        .menu-item {
+            a {
+                font-size: 12px;
+                font-weight: 400;
+                color: #FFF;
+                text-decoration: none;
+                user-select: none;
+                padding: 20px;
+            }
+        }
+    }
+    .copyrights {
+        font-size: 12px;
+        font-weight: 400;
+        color: #FFF;
+        margin-left: auto;
+    }
+}

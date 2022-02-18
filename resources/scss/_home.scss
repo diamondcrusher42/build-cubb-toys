@@ -1,0 +1,93 @@
+main#home {
+    padding-top: 140px;
+    section.project-carousel {
+        margin-bottom: 140px;
+        .container {
+            max-width: 100%;
+        }
+    }
+    section.cta-boxes {
+        margin-bottom: 74px;
+        .cta-boxes {
+            display: flex;
+            margin: 0 -8px;
+            .cta-box {
+                color: $dark;
+                margin: 0 8px;
+                padding: 25px 120px;
+                border-radius: 8px;
+                box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
+                position: relative;
+                overflow: hidden;
+                .content {
+                    display: flex;
+                    flex-flow: column;
+                    align-items: center;
+                    position: relative;
+                    z-index: 1;
+                    .title {
+                        text-transform: uppercase;
+                        font-size: 23px;
+                        font-weight: 700;
+                        line-height: 29px;
+                        margin-bottom: 12px;
+                    }
+                    .text {
+                        font-size: 14px;
+                        font-weight: 300;
+                        text-align: center;
+                        line-height: 22px;
+                        margin-bottom: 22px;
+                    }
+                    a.button {
+                        display: inline-block;
+                        text-decoration: none;
+                        color: #FFF;
+                        background: $dark;
+                        height: 42px;
+                        display: flex;
+                        align-items: center;
+                        padding: 0 30px;
+                        border-radius: 50px;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                    }
+                }
+                &.green {
+                    background: $green;
+                    .bg-icon {
+                        background-color: #92DB9B;
+                        mask: url('/img/megaphone.svg');
+                        width: 200px;
+                        height: 200px;
+                        position: absolute;
+                        top: -25px;
+                        left: -25px;
+                    }
+                }
+                &.blue {
+                    background: $blue;
+                    .bg-icon {
+                        position: absolute;
+                        width: 153px;
+                        height: 153px;
+                        user-select: none;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            -webkit-user-drag: none;
+                        }
+                        &.first {
+                            left: 28px;
+                            top: -53px;
+                        }
+                        &.second {
+                            right: -30px;
+                            bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

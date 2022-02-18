@@ -1,0 +1,12 @@
+html, body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: $dark;
+}
+
+.container {
+    width: 100%;
+    max-width: 1340px;
+    margin: 0 auto;
+    position: relative;
+}

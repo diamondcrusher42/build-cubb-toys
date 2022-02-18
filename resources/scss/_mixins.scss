@@ -1,0 +1,24 @@
+@mixin breakpoint($minmax, $breakpoint) {
+    
+    $width: false;
+    
+    @if $breakpoint == 'xs' {
+        $width: $screen-xs;
+    } @else if $breakpoint == 'sm' {
+        $width: $screen-sm;
+    } @else if $breakpoint == 'md' {
+        $width: $screen-md;
+    } @else if $breakpoint == 'lg' {
+        $width: $screen-lg;
+    } @else if $breakpoint == 'xl' {
+        $width: $screen-xl;
+    } @else {
+        $width: $breakpoint;
+    }
+    
+    @if($width) {
+        @media (#{$minmax}-width: #{$width}) {
+            @content;
+        }
+    }
+}

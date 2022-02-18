@@ -11,9 +11,20 @@ html, body {
 
 .container {
   width: 100%;
-  max-width: 1340px;
+  max-width: 1390px;
   margin: 0 auto;
   position: relative;
+  padding: 0 25px;
+}
+@media (max-width: 992px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 576px) {
+  .container {
+    padding: 0 15px;
+  }
 }
 
 @font-face {
@@ -35,6 +46,10 @@ html, body {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-hamburger:before {
+  content: "\e903";
 }
 
 .icon-person:before {
@@ -70,6 +85,10 @@ header#page-header .logo {
   align-items: center;
   top: -8px;
 }
+header#page-header .logo img {
+  width: 81%;
+  height: 81%;
+}
 header#page-header nav#main-menu {
   display: flex;
   justify-content: center;
@@ -90,11 +109,58 @@ header#page-header nav#main-menu .menu-item a {
 }
 header#page-header .icons {
   position: absolute;
-  right: 0;
+  right: 12px;
   font-size: 23px;
 }
 header#page-header .icons span {
   padding: 13px;
+}
+header#page-header #hamburger {
+  display: none;
+}
+header#page-header #hamburger span {
+  font-size: 25px;
+}
+@media (max-width: 1100px) {
+  header#page-header nav#main-menu .menu-item a {
+    padding: 30px 20px;
+  }
+}
+@media (max-width: 992px) {
+  header#page-header {
+    height: 104px;
+  }
+  header#page-header .container {
+    justify-content: center;
+  }
+  header#page-header .logo {
+    position: absolute;
+    height: 106px;
+    width: 106px;
+  }
+  header#page-header nav#main-menu {
+    display: none;
+  }
+  header#page-header .icons {
+    left: 7px;
+  }
+  header#page-header #hamburger {
+    display: block;
+    margin-left: auto;
+    cursor: pointer;
+    padding: 20px;
+    margin-right: -19px;
+    position: relative;
+    z-index: 9;
+  }
+}
+@media (max-width: 576px) {
+  header#page-header .icons {
+    left: 5px;
+  }
+  header#page-header .icons span {
+    padding: 10px;
+  }
 }
 
 footer#page-footer {

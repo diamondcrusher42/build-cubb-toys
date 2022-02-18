@@ -14,5 +14,8 @@
             <span class="icon-search"></span>
             <span class="icon-person"></span>
         </div>
+        <div id="hamburger">
+            <span class="icon-hamburger"></span>
+        </div>
     </div>
 </header>

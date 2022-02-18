@@ -23,7 +23,9 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  
+  .icon-hamburger:before {
+    content: "\e903";
+  }
   .icon-person:before {
     content: "\e902";
   }

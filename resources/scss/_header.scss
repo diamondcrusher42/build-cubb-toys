@@ -18,7 +18,8 @@ header#page-header {
         align-items: center;
         top: -8px;
         img {
-
+            width: 81%;
+            height: 81%;
         }
     }
     nav#main-menu {
@@ -41,10 +42,59 @@ header#page-header {
     }
     .icons {
         position: absolute;
-        right: 0;
+        right: 12px;
         font-size: 23px;
         span {
             padding: 13px;
+        }
+    }
+    #hamburger {
+        display: none;
+        span {
+            font-size: 25px;
+        }
+    }
+    @include breakpoint(max, 1100px) {
+        nav#main-menu {
+            .menu-item {
+                a {
+                    padding: 30px 20px;
+                }
+            }
+        }
+    }
+    @include breakpoint(max, lg) {
+        height: 104px;
+        .container {
+            justify-content: center;
+        }
+        .logo {
+            position: absolute;
+            height: 106px;
+            width: 106px;
+        }
+        nav#main-menu {
+            display: none;
+        }
+        .icons {
+            left: 7px;
+        }
+        #hamburger {
+            display: block;
+            margin-left: auto;
+            cursor: pointer;
+            padding: 20px;
+            margin-right: -19px;
+            position: relative;
+            z-index: 9;
+        }
+    }
+    @include breakpoint(max, sm) {
+        .icons {
+            left: 5px;
+            span {
+                padding: 10px;
+            }
         }
     }
 }

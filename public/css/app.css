@@ -15,6 +15,7 @@ html, body {
   margin: 0 auto;
   position: relative;
   padding: 0 25px;
+  box-sizing: border-box;
 }
 @media (max-width: 992px) {
   .container {
@@ -29,7 +30,7 @@ html, body {
 
 @font-face {
   font-family: "CubbToysIcons";
-  src: url(/fonts/CubbToysIcons.ttf?169ca41bbe61fd60b4addd9609e57a27) format("truetype"), url(/fonts/CubbToysIcons.woff?5c846fe18449f63613c6df3293101750) format("woff"), url(/fonts/CubbToysIcons.svg?8702d86506f118b33549150c09fd80c2) format("svg");
+  src: url(/fonts/CubbToysIcons.ttf?2868a3c88d6afea2c844c294911f7f25) format("truetype"), url(/fonts/CubbToysIcons.woff?431fbf8cec7ccb44d011324466f4548f) format("woff"), url(/fonts/CubbToysIcons.svg?55197504afa64fc28605b42be88b7232) format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -132,11 +133,15 @@ header#page-header #hamburger span {
   }
   header#page-header .container {
     justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    overflow: hidden;
   }
   header#page-header .logo {
     position: absolute;
     height: 106px;
     width: 106px;
+    top: 22px;
   }
   header#page-header nav#main-menu {
     display: none;
@@ -201,6 +206,35 @@ footer#page-footer .copyrights {
   font-weight: 400;
   color: #FFF;
   margin-left: auto;
+  opacity: 0.65;
+}
+@media (max-width: 992px) {
+  footer#page-footer {
+    padding-bottom: 25px;
+    height: auto;
+  }
+  footer#page-footer .container {
+    flex-flow: column;
+  }
+  footer#page-footer .logo {
+    margin-top: -35px;
+    border: 6px solid #202020;
+    margin-bottom: 20px;
+  }
+  footer#page-footer nav#footer-menu {
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+  footer#page-footer nav#footer-menu .menu-item a {
+    display: block;
+    padding: 10px;
+  }
+  footer#page-footer .copyrights {
+    margin: auto;
+  }
 }
 
 main#home {
@@ -208,6 +242,7 @@ main#home {
 }
 main#home section.project-carousel {
   margin-bottom: 140px;
+  overflow: hidden;
 }
 main#home section.project-carousel .container {
   max-width: 100%;
@@ -222,11 +257,12 @@ main#home section.cta-boxes .cta-boxes {
 main#home section.cta-boxes .cta-boxes .cta-box {
   color: #484848;
   margin: 0 8px;
-  padding: 25px 120px;
+  padding: 25px;
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
   position: relative;
   overflow: hidden;
+  flex: 1;
 }
 main#home section.cta-boxes .cta-boxes .cta-box .content {
   display: flex;
@@ -248,6 +284,7 @@ main#home section.cta-boxes .cta-boxes .cta-box .content .text {
   text-align: center;
   line-height: 22px;
   margin-bottom: 22px;
+  max-width: 385px;
 }
 main#home section.cta-boxes .cta-boxes .cta-box .content a.button {
   display: inline-block;
@@ -299,6 +336,22 @@ main#home section.cta-boxes .cta-boxes .cta-box.blue .bg-icon.first {
 main#home section.cta-boxes .cta-boxes .cta-box.blue .bg-icon.second {
   right: -30px;
   bottom: 10px;
+}
+@media (max-width: 992px) {
+  main#home section.cta-boxes .cta-boxes {
+    flex-flow: column;
+  }
+  main#home section.cta-boxes .cta-boxes .cta-box {
+    margin-bottom: 16px;
+  }
+}
+@media (max-width: 768px) {
+  main#home {
+    padding-top: 100px;
+  }
+  main#home section.project-carousel {
+    margin-bottom: 65px;
+  }
 }
 
 @font-face {
@@ -704,7 +757,6 @@ button.swiper-pagination-bullet {
 .carousel-slider {
   --carousel-slider-max-width: 100%;
   --carousel-slider-width: 521px;
-  --carousel-slider-height: 700px;
   --carousel-slider-navigation-color: $dark;
   --carousel-slider-pagination-color: $dark;
   --swiper-navigation-color: var(--carousel-slider-navigation-color);
@@ -726,17 +778,25 @@ button.swiper-pagination-bullet {
   background: #FFF;
   max-width: calc(100% - 48px);
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 .carousel-slider .carousel-slider-animate-opacity {
   height: 100%;
+  display: flex;
+  flex-flow: column;
 }
-.carousel-slider img {
+.carousel-slider .image {
+  padding-top: 96%;
+  position: relative;
+}
+.carousel-slider .image img {
+  position: absolute;
   width: 100%;
-  height: 500px;
-  display: block;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 8px 8px 0 0;
+  top: 0;
+  left: 0;
 }
 .carousel-slider .slide-content {
   width: 100%;
@@ -744,6 +804,10 @@ button.swiper-pagination-bullet {
   box-sizing: border-box;
   background: #FFF;
   border-radius: 0 0 8px 8px;
+  flex-grow: 1;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
 }
 .carousel-slider .slide-content h2 {
   margin: 0;
@@ -781,18 +845,31 @@ button.swiper-pagination-bullet {
   font-size: 20px;
   margin-left: 10px;
 }
+@media (max-width: 576px) {
+  .carousel-slider .slide-content {
+    padding: 25px 17px 25px 17px;
+  }
+  .carousel-slider .slide-content h2 {
+    font-size: 22px;
+    line-height: 27px;
+  }
+  .carousel-slider .slide-content .bottom-part {
+    flex-flow: column;
+    align-items: flex-start;
+  }
+  .carousel-slider .slide-content .bottom-part .money {
+    margin-bottom: 5px;
+  }
+  .carousel-slider .slide-content .bottom-part .author {
+    order: 2;
+  }
+}
 .carousel-slider .swiper-button-next {
   left: calc(50% + 750px);
 }
 .carousel-slider .swiper-button-prev {
   right: calc(50% + 750px);
   left: auto;
-}
-@media (max-width: 640px) {
-  .carousel-slider .swiper-button-next,
-.carousel-slider .swiper-button-prev {
-    display: none !important;
-  }
 }
 
 main#project section.project-summary {

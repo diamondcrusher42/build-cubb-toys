@@ -2,6 +2,7 @@ main#home {
     padding-top: 140px;
     section.project-carousel {
         margin-bottom: 140px;
+        overflow: hidden;
         .container {
             max-width: 100%;
         }
@@ -14,11 +15,12 @@ main#home {
             .cta-box {
                 color: $dark;
                 margin: 0 8px;
-                padding: 25px 120px;
+                padding: 25px;
                 border-radius: 8px;
                 box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
                 position: relative;
                 overflow: hidden;
+                flex: 1;
                 .content {
                     display: flex;
                     flex-flow: column;
@@ -38,6 +40,7 @@ main#home {
                         text-align: center;
                         line-height: 22px;
                         margin-bottom: 22px;
+                        max-width: 385px;
                     }
                     a.button {
                         display: inline-block;
@@ -88,6 +91,18 @@ main#home {
                     }
                 }
             }
+            @include breakpoint(max, lg) {
+                flex-flow: column;
+                .cta-box {
+                    margin-bottom: 16px;
+                }
+            }
+        }
+    }
+    @include breakpoint(max, md) {
+        padding-top: 100px;
+        section.project-carousel {
+            margin-bottom: 65px;
         }
     }
 }

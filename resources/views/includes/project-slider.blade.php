@@ -3,7 +3,9 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <div class="carousel-slider-animate-opacity">
-                    <img src="./images/grand-dinosaurs.png" alt="">
+                    <div class="image">
+                        <img src="./images/grand-dinosaurs.png" alt="">
+                    </div>
                     <div class="slide-content">
                         <h2>Grand Dinosaurs</h2>
                         <p>Build your own Grand Dinosaur collection, with this 6in1 Dinosaur Toy Set</p>
@@ -16,7 +18,9 @@
             </div>
             <div class="swiper-slide">
                 <div class="carousel-slider-animate-opacity">
-                    <img src="./images/lego1.png" alt="">
+                    <div class="image">
+                        <img src="./images/lego1.png" alt="">
+                    </div>
                     <div class="slide-content">
                         <h2>Justice League</h2>
                         <p>Determined to ensure Superman's ultimate sacrifice was not in vain, Bruce Wayne aligns forces with
@@ -32,7 +36,9 @@
             </div>
             <div class="swiper-slide">
                 <div class="carousel-slider-animate-opacity">
-                    <img src="./images/polzka.webp" alt="">
+                    <div class="image">
+                        <img src="./images/polzka.webp" alt="">
+                    </div>
                     <div class="slide-content">
                         <h2>Spider-Man: Far from Home</h2>
                         <p>Following the events of Avengers: Endgame (2019), Spider-Man must step up to take on new threats in a
@@ -46,7 +52,9 @@
             </div>
             <div class="swiper-slide">
                 <div class="carousel-slider-animate-opacity">
-                    <img src="./images/lego3.webp" alt="">
+                    <div class="image">
+                        <img src="./images/lego3.webp" alt="">
+                    </div>
                     <div class="slide-content">
                         <h2>The Suicide Squad</h2>
                         <p>Supervillains Harley Quinn, Bloodsport, Peacemaker and a collection of nutty cons at Belle Reve
@@ -62,7 +70,9 @@
             </div>
             <div class="swiper-slide">
                 <div class="carousel-slider-animate-opacity">
-                    <img src="./images/huda-ideja.webp" alt="">
+                    <div class="image">
+                        <img src="./images/huda-ideja.webp" alt="">
+                    </div>
                     <div class="slide-content">
                         <h2>Thor: Ragnarok</h2>
                         <p>Imprisoned on the planet Sakaar, Thor must race against time to return to Asgard and stop Ragnarök,

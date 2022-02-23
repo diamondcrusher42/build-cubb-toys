@@ -16,7 +16,15 @@ if (currentImage) {
     var thumbnailsSwiper = new Swiper(thumbnails, {
       loop: loop,
       spaceBetween: 20,
-      slidesPerView: 5
+      slidesPerView: 3,
+      breakpoints: {
+        512: {
+          slidesPerView: 4
+        },
+        768: {
+          slidesPerView: 5
+        }
+      }
     });
   }
 

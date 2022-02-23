@@ -11,7 +11,7 @@
                     <div class="cta-box green">
                         <div class="content">
                             <div class="title">Subscribe</div>
-                            <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mollis, ex vitae feugiat ornare, ante velit.</div>
+                            <div class="text">Click here to subscribe and be the first to find out when we launch new projects and contests with cool prizes from our creators.</div>
                             <a href="#" class="button">Subscribe now</a>
                         </div>
                         <div class="bg-icon"></div>
@@ -19,7 +19,7 @@
                     <div class="cta-box blue">
                         <div class="content">
                             <div class="title">Projects</div>
-                            <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mollis, ex vitae feugiat ornare, ante velit.</div>
+                            <div class="text">Check out and explore all the latest ideas our creators have build. You can show your support, follow your favorite creators or contribute to help bring amazing projects to reality.</div>
                             <a href="#" class="button">Show all projects</a>
                         </div>
                         <div class="bg-icon first"><img src="/img/blue-brick.png"></div>

@@ -87,10 +87,18 @@ function createSlider(selector) {
     modules: [Autoplay],
     watchSlidesProgress: true,
     loop: true,
-    slidesPerView: 3,
+    slidesPerView: 1.2,
     spaceBetween: 16,
     autoplay: {
       delay: 3000
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2.2
+      },
+      992: {
+        slidesPerView: 3
+      }
     },
     on: {
       progress(swiper) {

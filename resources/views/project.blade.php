@@ -12,6 +12,10 @@
                         <div class="thumbnails swiper">
                             @include('includes.gallery-loop')
                         </div>
+                        <div class="author-money-mobile">
+                            <div class="author"><span>Created by <strong>Adis</strong></span></div>
+                            <div class="money"><span>Money raised<strong>70.000 €</strong></span></div>
+                        </div>
                     </div>
                     <div class="summary">
                         <div class="header">
@@ -34,11 +38,11 @@
                             <div class="author"><span>Created by <strong>Adis</strong></span></div>
                             <div class="money"><span>Money raised<strong>70.000 €</strong></span></div>
                         </div>
-                    </div>
-                    <div id="support-project-cta">
-                        <span class="text">Support this project</span>
-                        <div class="bg-icon first"></div>
-                        <div class="bg-icon second"></div>
+                        <div id="support-project-cta">
+                            <span class="text">Support this project</span>
+                            <div class="bg-icon first"></div>
+                            <div class="bg-icon second"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -46,13 +50,26 @@
         <section class="project-tabs">
             <div class="container">
                 <div class="tabs">
-                    <span class="tab active">Project description</span>
-                    <span class="tab">Creator updates</span>
-                    <span class="tab">Ask creator</span>
-                </div>
-                <div class="tabs-content">
-                    <div class="tab-content">
-                        Random content
+                    <div class="tab active">
+                        <span class="title">Project description</span>
+                        <div class="tab-content">
+                            <p>Description....</p>
+                            <p>Description....</p>
+                            <p>Description....</p>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <span class="title">Creator updates</span>
+                        <div class="tab-content">
+                            <p>Updates....</p>
+                            <p>Updates....</p>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <span class="title">Ask creator</span>
+                        <div class="tab-content">
+                            <p>Ask....</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -81,7 +98,7 @@
                             <div class="swiper-slide">
                                 <div class="carousel-slider-animate-opacity">
                                     <div class="image">
-                                        <img src="./images/grand-dinosaurs.png" alt="">
+                                        <img src="./images/cubb-toys.png" alt="">
                                     </div>
                                     <div class="slide-content">
                                         <h2>Grand Dinosaurs</h2>

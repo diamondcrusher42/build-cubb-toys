@@ -7948,7 +7948,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _carousel_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./carousel-slider */ "./resources/js/carousel-slider.js");
 /* harmony import */ var _pqina_flip__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @pqina/flip */ "./node_modules/@pqina/flip/dist/flip.module.js");
 /* harmony import */ var _project_gallery__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./project-gallery */ "./resources/js/project-gallery.js");
+/* harmony import */ var _project_tabs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./project-tabs */ "./resources/js/project-tabs.js");
+/* harmony import */ var _project_tabs__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_project_tabs__WEBPACK_IMPORTED_MODULE_3__);
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+
 
 
 
@@ -8113,10 +8116,18 @@ function createSlider(selector) {
     modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Autoplay],
     watchSlidesProgress: true,
     loop: true,
-    slidesPerView: 3,
+    slidesPerView: 1.2,
     spaceBetween: 16,
     autoplay: {
       delay: 3000
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2.2
+      },
+      992: {
+        slidesPerView: 3
+      }
     },
     on: {
       progress: function progress(swiper) {
@@ -8171,7 +8182,15 @@ if (currentImage) {
     var thumbnailsSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](thumbnails, {
       loop: loop,
       spaceBetween: 20,
-      slidesPerView: 5
+      slidesPerView: 3,
+      breakpoints: {
+        512: {
+          slidesPerView: 4
+        },
+        768: {
+          slidesPerView: 5
+        }
+      }
     });
   }
 
@@ -8201,6 +8220,45 @@ if (currentImage) {
     currentImageSwiper.controller.control = fullScreenSwiper;
     fullScreenSwiper.controller.control = currentImageSwiper;
   }
+}
+
+/***/ }),
+
+/***/ "./resources/js/project-tabs.js":
+/*!**************************************!*\
+  !*** ./resources/js/project-tabs.js ***!
+  \**************************************/
+/***/ (() => {
+
+var tabsWrap = document.querySelector('#project .tabs');
+
+if (tabsWrap) {
+  (function () {
+    var tabs = tabsWrap.querySelectorAll('.tab');
+
+    var _loop = function _loop(i) {
+      var tab = tabs[i];
+      var title = tab.querySelector('.title');
+      var content = tab.querySelector('.tab-content');
+
+      if (tab.classList.contains('active')) {
+        tabsWrap.style.paddingBottom = content.offsetHeight + 'px';
+      }
+
+      title.addEventListener('click', function () {
+        for (var _i = 0; _i < tabs.length; _i++) {
+          tabs[_i].classList.remove('active');
+        }
+
+        tab.classList.add('active');
+        tabsWrap.style.paddingBottom = content.offsetHeight + 'px';
+      });
+    };
+
+    for (var i = 0; i < tabs.length; i++) {
+      _loop(i);
+    }
+  })();
 }
 
 /***/ }),
@@ -38544,6 +38602,18 @@ module.exports = JSON.parse('{"_from":"axios@^0.21","_id":"axios@0.21.4","_inBun
 /******/ 				}
 /******/ 			}
 /******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
 /******/ 		};
 /******/ 	})();
 /******/ 	

@@ -1,14 +1,14 @@
 @import '@pqina/flip/dist/flip.min.css';
 
 main#project {
+    overflow: hidden;
     section.project-summary {
         padding-top: 159px;
         margin-bottom: 60px;
         .content {
             display: flex;
-            flex-wrap: wrap;
             .gallery {
-                flex: 0 0 calc(50% - 8px);
+                flex: 0 0 662px;
                 margin-right: 16px;
                 overflow: hidden;
                 .image-container {
@@ -37,6 +37,14 @@ main#project {
                         height: 82px;
                     }
                 }
+                .author-money-mobile {
+                    display: none;
+                }
+                @include breakpoint(max, md) {
+                    .thumbnails {
+                        margin-top: 20px;
+                    }
+                }
             }
             .summary {
                 flex: 1;
@@ -49,6 +57,8 @@ main#project {
                 display: flex;
                 flex-flow: column;
                 box-sizing: border-box;
+                position: relative;
+                z-index: 2;
                 .header {
                     display: flex;
                     align-items: flex-start;
@@ -60,6 +70,7 @@ main#project {
                         line-height: 30px;
                         text-transform: uppercase;
                         margin: 0;
+                        padding-right: 25px;
                     }
                     .time-left {
                         #project-count-down {
@@ -132,64 +143,198 @@ main#project {
                         }
                     }
                 }
-            }
-            #support-project-cta {
-                background: $yellow;
-                font-size: 26px;
-                font-weight: 700;
-                text-transform: uppercase;
-                height: 82px;
-                margin-top: -82px;
-                display: flex;
-                align-items: center;
-                padding: 0 30px;
-                border-radius: 12px;
-                user-select: none;
-                cursor: pointer;
-                flex: 0 0 50%;
-                box-sizing: border-box;
-                margin-left: auto;
-                margin-right: -8px;
-                position: relative;
-                overflow: hidden;
-                .text {
-                    z-index: 2;
-                }
-                .bg-icon {
-                    mask: url('/img/eur-symbol.svg');
-                    width: 80px;
-                    height: 120px;
+                #support-project-cta {
                     position: absolute;
-                    z-index: 2;
-                    &.first {
-                        background-color: #D9C552;
-                        top: -29px;
-                        left: 400px;
-                    }
-                    &.second {
-                        background-color: #F0DC66;
-                        top: -29px;
-                        left: 490px;
-                    }
-                }
-                &::after {
-                    content: '';
-                    display: block;
-                    background: linear-gradient(90deg, darken($yellow, 15%), $yellow);
                     width: 100%;
-                    height: 100%;
-                    position: absolute;
-                    top: 0;
                     left: 0;
-                    opacity: 0;
-                    transition: opacity 250ms linear;
-                }
-                &:hover {
+                    bottom: -124px;
+                    background: $yellow;
+                    font-size: 26px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    height: 82px;
+                    display: flex;
+                    align-items: center;
+                    padding: 0 30px;
+                    border-radius: 12px;
+                    user-select: none;
+                    cursor: pointer;
+                    box-sizing: border-box;
+                    margin-left: auto;
+                    margin-right: -8px;
+                    overflow: hidden;
+                    line-height: 28px;
+                    max-width: 700px;
+                    .text {
+                        z-index: 3;
+                    }
+                    .bg-icon {
+                        mask: url('/img/eur-symbol.svg');
+                        width: 80px;
+                        height: 120px;
+                        position: absolute;
+                        z-index: 2;
+                        &.first {
+                            background-color: #D9C552;
+                            top: -29px;
+                            left: 400px;
+                        }
+                        &.second {
+                            background-color: #F0DC66;
+                            top: -29px;
+                            left: 490px;
+                        }
+                    }
                     &::after {
-                        opacity: 1;
+                        content: '';
+                        display: block;
+                        background: linear-gradient(90deg, darken($yellow, 15%), $yellow);
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        opacity: 0;
+                        transition: opacity 250ms linear;
+                    }
+                    &:hover {
+                        &::after {
+                            opacity: 1;
+                        }
+                    }
+                    @include breakpoint(max, sm) {
+                        font-size: 24px;
+                        padding: 20px;
+                        height: auto;
+                        bottom: -14px !important;
+                        .text {
+                            max-width: 175px;
+                        }
+                        .bg-icon {
+                            top: -22px !important;
+                            &.first {
+                                left: 200px;
+                            }
+                            &.second {
+                                left: 290px;
+                            }
+                        }
+                    }
+                }
+                @include breakpoint(max, 1336px) {
+                    .header {
+                        flex-flow: column;
+                        h1 {
+                            margin-bottom: 21px;
+                        }
+                    }
+                }
+                @include breakpoint(max, 1240px) {
+                    height: 593px;
+                    .bottom-part {
+                        flex-flow: column;
+                        align-items: flex-start;
+                        .author {
+                            order: 2;
+                        }
+                    }
+                }
+                @include breakpoint(max, sm) {
+                    padding: 25px 20px 45px 20px;
+                }
+                @include breakpoint(max, 360px) {
+                    .header {
+                        .time-left {
+                            #project-count-down {
+                                .tick-groups {
+                                    .tick-group {
+                                        margin-right: 5px;
+                                        .tick-flip {
+                                            font-size: 28px;
+                                            line-height: 47px;
+                                            min-width: 42px;
+                                            padding: 0 7px;
+    
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
+            @include breakpoint(max, 1100px) {
+                flex-flow: column;
+                position: relative;
+                padding-bottom: 80px;
+                .summary {
+                    margin-bottom: -20px;
+                    position: static;
+                    .bottom-part {
+                        display: none;
+                    }
+                    #support-project-cta {
+                        bottom: 0;
+                    }
+                }
+                .gallery {
+                    order: 2;
+                    margin-right: 0;
+                    padding: 20px;
+                    margin: -20px;
+                    flex-basis: auto;
+                    z-index: 3;
+                    .current-image {
+                        width: 100%;
+                        padding-top: 71%;
+                        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+                        .swiper-wrapper {
+                            position: absolute;
+                            top: 0px;
+                            left: 0px;
+                            width: 100%;
+                            height: 100%;
+                            .swiper-slide {
+                                .image-container {
+                                    height: 100%;
+                                }
+                            }
+                        }
+                    }
+                    .author-money-mobile {
+                        display: block;
+                        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+                        padding: 23px 20px 15px 20px;
+                        margin: 20px 0;
+                        border-radius: 12px;
+                        .author {
+                            font-size: 14px;
+                            line-height: 22px;
+                            margin-bottom: 10px;
+                        }
+                        .money {
+                            display: flex;
+                            align-items: center;
+                            font-size: 16px;
+                            strong {
+                                margin-left: 15px;
+                                font-size: 28px;
+                                line-height: 42px;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+        @include breakpoint(max, 1100px) {
+            padding-top: 90px;
+        }
+        @include breakpoint(max, lg) {
+            padding-top: 60px;
+        }
+        @include breakpoint(max, md) {
+            padding-top: 40px;
         }
     }
     section.project-tabs {
@@ -197,37 +342,80 @@ main#project {
         .tabs {
             display: flex;
             height: 59px;
+            position: relative;
             .tab {
-                padding: 0 30px;
-                height: 100%;
-                text-transform: uppercase;
-                font-size: 16px;
-                font-weight: 700;
-                background: #EAEAEA;
-                color: $dark;
-                display: inline-flex;
-                align-items: center;
-                margin-right: 1px;
-                user-select: none;
-                cursor: pointer;
-                transition: background 250ms linear;
-                &:hover {
-                    background: darken(#EAEAEA, 3%);
+                .title {
+                    padding: 0 30px;
+                    height: 100%;
+                    text-transform: uppercase;
+                    font-size: 16px;
+                    font-weight: 700;
+                    background: #EAEAEA;
+                    color: $dark;
+                    display: inline-flex;
+                    align-items: center;
+                    margin-right: 1px;
+                    user-select: none;
+                    cursor: pointer;
+                    transition: background 250ms linear;
+                    &:hover {
+                        background: darken(#EAEAEA, 3%);
+                    }
                 }
                 &.active {
-                    background: #202020;
-                    color: #FFF;
-                    cursor: default;
+                    .title {
+                        background: #202020;
+                        color: #FFF;
+                        cursor: default;
+                    }
+                    .tab-content {
+                        display: block;
+                    }
                 }
                 &:first-child {
-                    border-radius: 12px 0 0 0;
+                    .title {
+                        border-radius: 12px 0 0 0;
+                    }
+                }
+                .tab-content {
+                    display: none;
+                    position: absolute;
+                    left: 0;
+                    width: 100%;
+                    padding: 50px 30px 67px 30px;
+                    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+                    border-radius: 0 12px 12px 12px;
+                    box-sizing: border-box;
                 }
             }
         }
-        .tabs-content {
-            padding: 50px 30px 67px 30px;
-            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-            border-radius: 0 12px 12px 12px;
+        @include breakpoint(max, md) {
+            .tabs {
+                flex-flow: column;
+                height: auto;
+                padding-bottom: 0 !important;
+                .tab {
+                    margin-bottom: 20px;
+                    .title {
+                        width: 100%;
+                        height: 50px;
+                        box-sizing: border-box;
+                        justify-content: center;
+                        border-radius: 12px !important;
+                    }
+                    .tab-content {
+                        position: static;
+                    }
+                    &.active {
+                        .title {
+                            border-radius: 12px 12px 0 0 !important;
+                        }
+                    }
+                }
+            }
+        }
+        @include breakpoint(max, md) {
+            margin-bottom: 40px;
         }
     }
     section.other-projects {
@@ -291,11 +479,12 @@ main#project {
                         font-size: 12px;
                         font-weight: 300;
                         padding-top: 25px;
+                        flex-wrap: wrap;
                         strong {
                             font-weight: 700;
                         }
                         .author {
-                
+                            padding-right: 20px;
                         }
                         .money {
                             span {
@@ -307,6 +496,9 @@ main#project {
                                 }
                             }
                         }
+                    }
+                    @include breakpoint(max, xs) {
+                        padding: 28px 15px 28px 15px;
                     }
                 }
             }

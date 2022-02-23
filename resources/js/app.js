@@ -2,6 +2,7 @@ require('./bootstrap');
 import {createSlider3D, createSlider} from './carousel-slider';
 import Tick from '@pqina/flip';
 import './project-gallery';
+import './project-tabs';
 
 createSlider3D('.carousel-slider');
 createSlider('.project-slider');

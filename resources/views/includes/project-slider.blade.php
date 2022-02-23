@@ -19,7 +19,7 @@
             <div class="swiper-slide">
                 <div class="carousel-slider-animate-opacity">
                     <div class="image">
-                        <img src="./images/lego1.png" alt="">
+                        <img src="./images/cubb-toys.png" alt="">
                     </div>
                     <div class="slide-content">
                         <h2>Justice League</h2>

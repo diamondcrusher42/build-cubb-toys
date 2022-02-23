@@ -6,7 +6,7 @@
     </div>
     <div class="swiper-slide">
         <div class="image-container">
-            <img src="/images/guardians-of-the-galaxy.jpg">
+            <img src="/images/cubb-toys.png">
         </div>
     </div>
     <div class="swiper-slide">

@@ -270,21 +270,22 @@ main#home section.cta-boxes .cta-boxes .cta-box .content {
   align-items: center;
   position: relative;
   z-index: 1;
+  height: 100%;
 }
 main#home section.cta-boxes .cta-boxes .cta-box .content .title {
   text-transform: uppercase;
-  font-size: 23px;
+  font-size: 24px;
   font-weight: 700;
   line-height: 29px;
-  margin-bottom: 12px;
+  margin-bottom: 18px;
 }
 main#home section.cta-boxes .cta-boxes .cta-box .content .text {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 300;
   text-align: center;
   line-height: 22px;
-  margin-bottom: 22px;
-  max-width: 385px;
+  margin-bottom: 28px;
+  max-width: 460px;
 }
 main#home section.cta-boxes .cta-boxes .cta-box .content a.button {
   display: inline-block;
@@ -298,6 +299,7 @@ main#home section.cta-boxes .cta-boxes .cta-box .content a.button {
   border-radius: 50px;
   text-transform: uppercase;
   font-weight: 700;
+  margin-top: auto;
 }
 main#home section.cta-boxes .cta-boxes .cta-box.green {
   background: #9DE1A5;

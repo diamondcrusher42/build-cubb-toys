@@ -123,6 +123,21 @@ input[type=text]:focus {
   transform: translateY(-2px);
 }
 
+main.subpage {
+  padding-top: 80px;
+  padding-bottom: 120px;
+}
+main.subpage h1 {
+  margin-bottom: 80px;
+}
+main.subpage h2 {
+  margin-top: 50px;
+}
+main.subpage p {
+  font-size: 16px;
+  line-height: 28px;
+}
+
 @font-face {
   font-family: "CubbToysIcons";
   src: url(/fonts/CubbToysIcons.ttf?2868a3c88d6afea2c844c294911f7f25) format("truetype"), url(/fonts/CubbToysIcons.woff?431fbf8cec7ccb44d011324466f4548f) format("woff"), url(/fonts/CubbToysIcons.svg?55197504afa64fc28605b42be88b7232) format("svg");
@@ -182,8 +197,8 @@ header#page-header .logo {
   top: -8px;
 }
 header#page-header .logo img {
-  width: 81%;
-  height: 81%;
+  width: 100%;
+  height: 100%;
 }
 header#page-header nav#main-menu {
   display: flex;
@@ -353,7 +368,7 @@ footer#page-footer .copyrights {
 }
 .popup-container .popup-wrapper {
   max-height: 100%;
-  overflow: scroll;
+  overflow: auto;
 }
 .popup-container .popup-wrapper .popup {
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
@@ -1344,19 +1359,19 @@ main#project section.project-summary .content .summary #support-project-cta .tex
 main#project section.project-summary .content .summary #support-project-cta .bg-icon {
   -webkit-mask: url("/img/eur-symbol.svg");
           mask: url("/img/eur-symbol.svg");
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
   width: 80px;
-  height: 120px;
+  height: 76px;
   position: absolute;
   z-index: 2;
 }
 main#project section.project-summary .content .summary #support-project-cta .bg-icon.first {
   background-color: #D9C552;
-  top: -29px;
   left: 400px;
 }
 main#project section.project-summary .content .summary #support-project-cta .bg-icon.second {
   background-color: #F0DC66;
-  top: -29px;
   left: 490px;
 }
 main#project section.project-summary .content .summary #support-project-cta::after {
@@ -1383,9 +1398,6 @@ main#project section.project-summary .content .summary #support-project-cta:hove
   }
   main#project section.project-summary .content .summary #support-project-cta .text {
     max-width: 175px;
-  }
-  main#project section.project-summary .content .summary #support-project-cta .bg-icon {
-    top: -22px !important;
   }
   main#project section.project-summary .content .summary #support-project-cta .bg-icon.first {
     left: 200px;

@@ -83,7 +83,7 @@ footer#page-footer {
     display: none;
     .popup-wrapper {
         max-height: 100%;
-        overflow: scroll;
+        overflow: auto;
         .popup {
             box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
             background: #FFF;

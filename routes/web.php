@@ -18,3 +18,17 @@ Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/projects', [ProjectController::class, 'index']);
 Route::get('/project/{slug}', [ProjectController::class, 'show']);
+
+Route::get('/submit-project', function () {
+    return view('subpages.submit-project');
+});
+Route::get('/how-it-works', function () {
+    return view('subpages.how-it-works');
+});
+Route::get('/faq', function () {
+    return view('subpages.faq');
+});
+Route::get('/about-us', function () {
+    return view('subpages.about-us');
+});
+

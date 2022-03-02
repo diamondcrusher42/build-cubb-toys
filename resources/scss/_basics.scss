@@ -105,3 +105,18 @@ input[type="text"] {
         transform: translateY(-2px);
     }
 }
+
+main.subpage {
+    padding-top: 80px;
+    padding-bottom: 120px;
+    h1 {
+        margin-bottom: 80px;
+    }
+    h2 {
+        margin-top: 50px;
+    }
+    p {
+        font-size: 16px;
+        line-height: 28px;
+    }
+}

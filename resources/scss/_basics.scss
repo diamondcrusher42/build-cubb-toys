@@ -18,3 +18,90 @@ html, body {
         padding: 0 15px;
     }
 }
+
+input[type="text"] {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    border-radius: 7px;
+    border: 1px solid #B9B9B9;
+    width: 100%;
+    padding: 14px 22px;
+    line-height: 25px;
+    outline: none;
+    box-sizing: border-box;
+    &::placeholder {
+        color: #888888;
+        opacity: 1;
+    }
+    &:focus {
+        box-shadow: 0 0 0 3px rgba(171, 150, 255, 0.24);
+    }
+}
+
+.checkbox {
+    display: block;
+    position: relative;
+    text-align: left;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    user-select: none;
+    color: #888888;
+    padding-left: 33px;
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+        &:checked {
+            & ~ .checkmark {
+                background-color: $violet;
+                border-color: $violet;
+                &::after {
+                    display: block;
+                }
+            }
+        }
+    }
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 16px;
+        width: 16px;
+        border: 1px solid #888888;
+        &::after {
+            content: '';
+            position: absolute;
+            display: none;
+            left: 5px;
+            top: 1px;
+            width: 5px;
+            height: 10px;
+            border: solid #FFF;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+
+        }
+    }
+}
+
+.invest-button {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.16);
+    border-radius: 21px;
+    background: $violet;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 42px;
+    padding: 0 30px;
+    cursor: pointer;
+    transition: transform 250ms linear;
+    display: inline-block;
+    flex-shrink: 0;
+    &:hover {
+        transform: translateY(-2px);
+    }
+}

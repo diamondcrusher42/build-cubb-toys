@@ -64,3 +64,119 @@ footer#page-footer {
         }
     }
 }
+.popup-open {
+    overflow: hidden;
+    .popup-container {
+        display: flex;
+    }
+}
+.popup-container {
+    background: rgba(0, 0, 0, 0.56);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    .popup-wrapper {
+        max-height: 100%;
+        overflow: scroll;
+        .popup {
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+            background: #FFF;
+            border-radius: 12px;
+            overflow: hidden;
+            .header {
+                height: 82px;
+                background: $yellow;
+                display: flex;
+                align-items: center;
+                span.icon-close {
+                    margin-left: auto;
+                    padding: 20px;
+                    font-size: 19px;
+                    cursor: pointer;
+                    transition: transform 150ms linear;
+                    &:hover {
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+            &.invest-popup {
+                max-width: 662px;
+                width: 100%;
+                .content {
+                    padding: 40px 55px;
+                    text-align: center;
+                    .title {
+                        font-size: 26px;
+                        line-height: 30px;
+                        margin-bottom: 20px;
+                        font-weight: 300;
+                        &.primary {
+                            text-transform: uppercase;
+                            font-weight: 700;
+                            margin-bottom: 10px;
+                        }
+                    }
+                    .description {
+                        font-size: 14px;
+                        line-height: 22px;
+                        font-weight: 300;
+                        margin-bottom: 30px;
+                    }
+                    .input-field {
+                        margin-bottom: 10px;
+                    }
+                    .totals {
+                        margin-top: 30px;
+                        margin-bottom: 50px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        .amount {
+                            display: flex;
+                            align-items: center;
+                            span {
+                                font-size: 18px;
+                                font-weight: 500;
+                                color: #463E65;
+                            }
+                            strong {
+                                font-size: 24px;
+                                color: $violet;
+                                font-weight: 600;
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+                }
+                @include breakpoint(max, 662px) {
+                    border-radius: 0;
+                }
+                @include breakpoint(max, 640px) {
+                    .content {
+                        padding: 40px 20px;
+                    }
+                }
+                @include breakpoint(max, sm) {
+                    .content {
+                        .totals {
+                            flex-flow: column;
+                            .terms {
+                                align-self: flex-start;
+                                margin-bottom: 35px;
+                            }
+                            .amount {
+                                align-self: flex-end;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

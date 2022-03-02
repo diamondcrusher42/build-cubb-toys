@@ -1,4 +1,3 @@
-// eslint-disable-next-line
 import Swiper, { Autoplay, Navigation, Pagination } from 'swiper';
 
 function createSlider3D(selector) {
@@ -9,7 +8,6 @@ function createSlider3D(selector) {
     return;
   }
 
-  // init main swiper
   const swiper = new Swiper(swiperEl, {
     modules: [Autoplay, Navigation, Pagination],
     grabCursor: true,
@@ -26,7 +24,6 @@ function createSlider3D(selector) {
       delay: 3000
     },
     on: {
-      // eslint-disable-next-line
       progress(swiper) {
         const scaleStep = 0.175;
         const zIndexMax = swiper.slides.length;
@@ -57,7 +54,6 @@ function createSlider3D(selector) {
           });
         }
       },
-      // eslint-disable-next-line
       setTransition(swiper, duration) {
         for (let i = 0; i < swiper.slides.length; i += 1) {
           const slideEl = swiper.slides[i];

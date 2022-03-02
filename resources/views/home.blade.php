@@ -3,7 +3,7 @@
 @section('content')
     <main id="home">
         <section class="project-carousel">
-            @include('includes.project-slider')
+            @include('includes.project-slider', ['projects' => $carouselProjects])
         </section>
         <section class="cta-boxes">
             <div class="container">
@@ -20,7 +20,7 @@
                         <div class="content">
                             <div class="title">Projects</div>
                             <div class="text">Check out and explore all the latest ideas our creators have build. You can show your support, follow your favorite creators or contribute to help bring amazing projects to reality.</div>
-                            <a href="#" class="button">Show all projects</a>
+                            <a href="/projects" class="button">Show all projects</a>
                         </div>
                         <div class="bg-icon first"><img src="/img/blue-brick.png"></div>
                         <div class="bg-icon second"><img src="/img/blue-brick.png"></div>

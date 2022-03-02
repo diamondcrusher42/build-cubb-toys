@@ -18,7 +18,7 @@
     max-width: 100%;
 
     .swiper {
-        padding-bottom: 32px;
+        padding: 32px 0;
     }
     .swiper-slide {
         width: var(--carousel-slider-width);
@@ -34,6 +34,8 @@
         height: 100%;
         display: flex;
         flex-flow: column;
+        text-decoration: none;
+        color: $dark;
     }
     .image {
         padding-top: 96%;

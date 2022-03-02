@@ -297,6 +297,7 @@ main#project {
                             .swiper-slide {
                                 .image-container {
                                     height: 100%;
+                                    background-color: #FFF;
                                 }
                             }
                         }
@@ -335,6 +336,179 @@ main#project {
         }
         @include breakpoint(max, md) {
             padding-top: 40px;
+        }
+    }
+    section.support-project {
+        margin-bottom: 50px;
+        .support-box {
+            background: #EAEAEA;
+            border-radius: 12px;
+            padding: 40px 30px;
+            h2 {
+                font-size: 26px;
+                line-height: 30px;
+                font-weight: 700;
+                margin-top: 0;
+                margin-bottom: 20px;
+                text-transform: uppercase;
+            }
+            .description {
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 28px;
+                margin-bottom: 40px;
+            }
+            .support-tiers {
+                display: flex;
+                flex-flow: column;
+                .tier {
+                    margin-bottom: 20px;
+                    display: flex;
+                    .title {
+                        color: #FFF;
+                        font-size: 26px;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        flex: 0 0 406px;
+                        height: 84px;
+                        border-radius: 12px 0 0 12px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    .details {
+                        border: 1px solid #FFF;
+                        border-left: 0;
+                        flex: 1;
+                        border-radius: 0 12px 12px 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 0 30px 0 16px;
+                        background: #FFF;
+                        .text {
+                            font-size: 20px;
+                            font-weight: 700;
+                            display: flex;
+                            align-items: center;
+                            .investment-amount {
+                                display: flex;
+                                align-items: center;
+                                font-size: 16px;
+                                font-weight: 300;
+                                flex: 0 0 250px;
+                                .amount {
+                                    font-weight: 700;
+                                    font-size: 28px;
+                                    flex-grow: 1;
+                                    text-align: right;
+                                }
+                                &::after {
+                                    content: '=';
+                                    padding: 0 28px;
+                                }
+                            }
+                            .investment-reward {
+                                display: flex;
+                                align-items: center;
+                                font-size: 20px;
+                                font-weight: 700;
+                                .light {
+                                    font-size: 16px;
+                                    font-weight: 300;
+                                }
+                                .bigger {
+                                    font-size: 28px;
+                                }
+                                span {
+                                    margin-right: 13px;
+                                    white-space: nowrap;
+                                }
+                            }
+                        }
+                    }
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    &.supporter {
+                        .title {
+                            background: $blue;
+                        }
+                    }
+                    &.silver {
+                        .title {
+                            background: $yellow;
+                        }
+                    }
+                    &.gold {
+                        .title {
+                            background: $green;
+                        }
+                    }
+                    &.platinum {
+                        .title {
+                            background: $red;
+                        }
+                    }
+                    @include breakpoint(max, 1336px) {
+                        flex-flow: column;
+                        .title {
+                            flex-basis: 60px;
+                            border-radius: 12px 12px 0 0;
+                            font-size: 22px;
+                        }
+                        .details {
+                            border-radius: 0 0 12px 12px;
+                            padding: 20px;
+                            flex-flow: column;
+                            .text {
+                                margin-bottom: 22px;
+                                .investment-amount {
+                                    flex: auto;
+                                    .amount {
+                                        margin-left: 15px;
+                                    }
+                                    &::after {
+                                        padding: 0 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    @include breakpoint(max, md) {
+                        .details {
+                            .text {
+                                flex-flow: column;
+                                .investment-reward {
+                                    flex-wrap: wrap;
+                                    justify-content: center;
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                    @include breakpoint(max, sm) {
+                        .details {
+                            .text {
+                                .investment-amount {
+                                    flex-wrap: wrap;
+                                    text-align: center;
+                                    justify-content: center;
+                                    .amount {
+                                        flex-grow: 0;
+                                    }
+                                    &::after {
+                                        flex-basis: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            @include breakpoint(max, sm) {
+                padding: 30px 15px;
+            }
         }
     }
     section.project-tabs {
@@ -430,77 +604,6 @@ main#project {
             .swiper {
                 margin: -30px -16px;
                 padding: 30px 16px;
-                .swiper-slide {
-                    border-radius: 8px;
-                    background: #FFF;
-                    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-                    overflow: hidden;
-                }
-                .image {
-                    padding-top: 96%;
-                    position: relative;
-                    img {
-                        position: absolute;
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                        top: 0;
-                        left: 0;
-                    }
-                }
-                .slide-content {
-                    width: 100%;
-                    padding: 35px 20px 30px 20px;
-                    box-sizing: border-box;
-                    background: #FFF;
-                    border-radius: 8px;
-                    overflow: hidden;
-                    h2 {
-                        margin: 0;
-                        font-weight: bold;
-                        font-size: 24px;
-                        line-height: 30px;
-                    }
-                    p {
-                        margin: 8px 0 0;
-                        opacity: 0.8;
-                        font-size: 14px;
-                        font-weight: 300;
-                        line-height: 22px;
-                        display: -webkit-box;
-                        -webkit-box-orient: vertical;
-                        -webkit-line-clamp: 2;
-                        overflow: hidden;
-                    }
-                    .bottom-part {
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        font-size: 12px;
-                        font-weight: 300;
-                        padding-top: 25px;
-                        flex-wrap: wrap;
-                        strong {
-                            font-weight: 700;
-                        }
-                        .author {
-                            padding-right: 20px;
-                        }
-                        .money {
-                            span {
-                                display: flex;
-                                align-items: center;
-                                strong {
-                                    font-size: 20px;
-                                    margin-left: 10px;
-                                }
-                            }
-                        }
-                    }
-                    @include breakpoint(max, xs) {
-                        padding: 28px 15px 28px 15px;
-                    }
-                }
             }
         }
     }

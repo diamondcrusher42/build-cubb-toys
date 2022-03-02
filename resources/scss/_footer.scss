@@ -64,6 +64,12 @@ footer#page-footer {
         }
     }
 }
+#razpis-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 .popup-open {
     overflow: hidden;
     .popup-container {

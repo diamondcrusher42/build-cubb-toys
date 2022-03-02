@@ -10,6 +10,12 @@
         <span class="copyrights">&copy; 2022 CUBB. All rights reserved.</span>
     </div>
 </footer>
+<div id="razpis-logos">
+    <img src="/img/razpis/regionalni_razvoj.jpg">
+    <img src="/img/razpis/mgrt.jpg">
+    <img src="/img/razpis/slovenski_podjetniski_sklad.jpg">
+    <img src="/img/razpis/startup_slovenija.jpg">
+</div>
 <div class="popup-container">
     <div class="popup-wrapper">
         <div class="popup invest-popup">

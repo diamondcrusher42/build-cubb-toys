@@ -1,4 +1,5 @@
 require('./bootstrap');
+import './main-menu';
 import {createSlider3D, createSlider} from './carousel-slider';
 import Tick from '@pqina/flip';
 import './project-gallery';
@@ -27,3 +28,4 @@ if (projectCountDownEl) {
     }
   });
 }
+

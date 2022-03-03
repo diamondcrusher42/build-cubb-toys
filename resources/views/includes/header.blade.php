@@ -16,6 +16,7 @@
         </div>
         <div id="hamburger">
             <span class="icon-hamburger"></span>
+            <span class="icon-close"></span>
         </div>
     </div>
 </header>

@@ -4,8 +4,8 @@
             <img src="/img/logo.png">
         </div>
         <nav id="footer-menu">
-            <span class="menu-item"><a href="#">Terms and Conditions</a></span>
-            <span class="menu-item"><a href="#">Sitemap</a></span>
+            <span class="menu-item"><a href="/privacy-policy">Privacy policy</a></span>
+            <!--<span class="menu-item"><a href="#">Sitemap</a></span>-->
         </nav>
         <span class="copyrights">&copy; 2022 CUBB. All rights reserved.</span>
     </div>
@@ -24,13 +24,19 @@
             </div>
             <div class="content">
                 <div class="title primary">Support this project</div>
-                <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus bibendum tortor vitae quam porttitor aliquam lacinia sed ipsum. In hac habitasse platea dictumst. Mauris bibendum nunc vel euismod suscipit.</div>
+                <div class="description">
+                    <p>Hi there, we really appreciate your support, helping creators bring their ideas to life.</p>
+                    <p>Please make sure you are at least 18 years old, as that is our only restriction on who can support or invest in a project.</p>
+                    <p>There are no direct obligations to this order. The contract is valid only when you complete the payment.</p>
+                    <p>You will receive your payment instructions in your email in the next few minutes, after your submit this order.</p>
+                    <p>A big thank you, from the CUBB team.</p>
+                </div>
                 <div class="title">Your Data</div>
                 <div class="input-field">
-                    <input type="text" placeholder="Your Name">
+                    <input id="investor-name" type="text" placeholder="Your Name">
                 </div>
                 <div class="input-field">
-                    <input type="text" placeholder="Your email address">
+                    <input id="investor-email" type="text" placeholder="Your email address">
                 </div>
                 <div class="totals">
                     <label class="checkbox terms">I agree on terms & conditions
@@ -42,7 +48,14 @@
                         <strong>? €</strong>
                     </div>
                 </div>
-                <div class="invest-button">Invest now</div>
+                <div class="error"></div>
+                <div class="invest-button">Send me instructions</div>
+            </div>
+            <div class="content success">
+                <div class="title">Thank you!</div>
+                <div class="description">
+                    <p>Email has been sent successfully. It should arrive shortly.</p>
+                </div>
             </div>
         </div>
     </div>

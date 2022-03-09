@@ -159,6 +159,16 @@ footer#page-footer {
                             }
                         }
                     }
+                    .error {
+                        display: none;
+                        color: $red;
+                        font-size: 16px;
+                        font-weight: 700;
+                        margin-bottom: 20px;
+                    }
+                    &.success {
+                        display: none;
+                    }
                 }
                 @include breakpoint(max, 662px) {
                     border-radius: 0;

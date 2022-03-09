@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Models\Project;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,4 +17,19 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+// temporary
+Route::post('/invest', function (Request $request) {
+    $email = $request->input('email');
+    $name = $request->input('name');
+
+    Mail::send('emails.investment-instructions', [
+        'name' => $name,
+        'amount' => $request->input('amount'),
+        'project' => Project::find($request->input('projectId'))
+    ], function ($message) use ($email, $name) {
+        $message->to($email, $name)
+            ->subject('Cubb Platform - pledge summary and instructions');
+    });
 });

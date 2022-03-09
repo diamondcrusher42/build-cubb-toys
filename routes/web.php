@@ -31,4 +31,6 @@ Route::get('/faq', function () {
 Route::get('/about-us', function () {
     return view('subpages.about-us');
 });
-
+Route::get('/privacy-policy', function () {
+    return view('subpages.privacy-policy');
+});

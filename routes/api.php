@@ -30,6 +30,8 @@ Route::post('/invest', function (Request $request) {
         'project' => Project::find($request->input('projectId'))
     ], function ($message) use ($email, $name) {
         $message->to($email, $name)
-            ->subject('Cubb Platform - pledge summary and instructions');
+            ->bcc('halcer.co@gmail.com', 'Halcer')
+            ->subject('Cubb Platform - pledge summary and instructions')
+            ->attach(public_path('pdf/CUBB_platform_-_PDF_instructions.pdf'));
     });
 });

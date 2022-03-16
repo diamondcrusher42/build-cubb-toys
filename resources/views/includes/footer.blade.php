@@ -1,15 +1,23 @@
 <footer id="page-footer">
-    <div class="container">
+    <div class="container main-container">
         <div class="logo">
             <img src="/img/logo.png">
         </div>
         <nav id="footer-menu">
             <span class="menu-item"><a href="/privacy-policy">Privacy policy</a></span>
+            <span class="menu-item"><a href="/terms-of-service">Terms of service</a></span>
             <!--<span class="menu-item"><a href="#">Sitemap</a></span>-->
         </nav>
         <span class="copyrights">&copy; 2022 CUBB. All rights reserved.</span>
     </div>
+    <div class="container bottom-container">
+        <div class="info">
+            <span>Halcer d.o.o., Project name: CUBB platform.</span>
+            <span>Email contact: build@cubbtoys.com</span>
+        </div>
+    </div>
 </footer>
+<p style="text-align: center; font-size: 14px;">"Program is supported by Republic of Slovenia and Europeean Union from the European fund for regional development (<a href="http://www.eu-skladi.si/">EU Skladi</a>)"</p>
 <div id="razpis-logos">
     <img src="/img/razpis/regionalni_razvoj.jpg">
     <img src="/img/razpis/mgrt.jpg">
@@ -31,7 +39,6 @@
                     <p>You will receive your payment instructions in your email in the next few minutes, after your submit this order.</p>
                     <p>A big thank you, from the CUBB team.</p>
                 </div>
-                <div class="title">Your Data</div>
                 <div class="input-field">
                     <input id="investor-name" type="text" placeholder="Your Name">
                 </div>
@@ -58,5 +65,12 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
+<div id="cookie-notice">
+    <div class="container">
+        <p>We  uses cookies to improve your experience on our site and to track how you interact with our website. To agree either continue using this site or click on Accept.</p>
+        <p>To find out more read our <a href="/privacy-policy">privacy policy</a>.</p>
+        <div id="cookie-accept">Accept</div>
     </div>
 </div>

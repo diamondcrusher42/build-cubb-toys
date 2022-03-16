@@ -1,42 +1,61 @@
 footer#page-footer {
     background: #202020;
-    height: 153px;
-    .container {
+    .main-container {
         display: flex;
         align-items: center;
-        height: 100%;
-    }
-    .logo {
-        height: 83px;
-        width: 83px;
-        img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        .logo {
+            height: 83px;
+            width: 83px;
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        nav#footer-menu {
+            margin-left: 20px;
+            .menu-item {
+                a {
+                    font-size: 12px;
+                    font-weight: 400;
+                    color: #FFF;
+                    text-decoration: none;
+                    user-select: none;
+                    padding: 20px;
+                }
+            }
+        }
+        .copyrights {
+            font-size: 12px;
+            font-weight: 400;
+            color: #FFF;
+            margin-left: auto;
+            opacity: 0.65;
         }
     }
-    nav#footer-menu {
-        margin-left: 20px;
-        .menu-item {
-            a {
-                font-size: 12px;
-                font-weight: 400;
-                color: #FFF;
-                text-decoration: none;
-                user-select: none;
-                padding: 20px;
+    .bottom-container {
+        .info {
+            padding: 25px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.65);
+            color: #FFF;
+            font-size: 12px;
+            display: flex;
+            justify-content: space-between;
+            opacity: 0.8;
+        }
+        @include breakpoint(max, md) {
+            .info {
+                flex-flow: column;
+                align-items: center;
+                span {
+                    margin-bottom: 15px;
+                }
             }
         }
     }
-    .copyrights {
-        font-size: 12px;
-        font-weight: 400;
-        color: #FFF;
-        margin-left: auto;
-        opacity: 0.65;
-    }
     @include breakpoint(max, lg) {
-        padding-bottom: 25px;
         height: auto;
         .container {
             flex-flow: column;
@@ -194,5 +213,31 @@ footer#page-footer {
                 }
             }
         }
+    }
+}
+#cookie-notice {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    padding-top: 20px;
+    padding-bottom: 25px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #FFF;
+    z-index: 9999;
+    font-size: 14px;
+    text-align: center;
+    display: none;
+    a {
+        color: #FFF;
+    }
+    #cookie-accept {
+        display: inline-block;
+        border: 1px solid #FFF;
+        border-radius: 8px;
+        padding: 5px 15px;
+        user-select: none;
+        cursor: pointer;
+        margin-top: 15px;
     }
 }

@@ -433,19 +433,19 @@ main#project {
                             background: $blue;
                         }
                     }
-                    &.silver {
+                    &.gold {
                         .title {
                             background: $yellow;
                         }
                     }
-                    &.gold {
+                    &.platinum {
                         .title {
                             background: $green;
                         }
                     }
-                    &.platinum {
+                    &.diamond {
                         .title {
-                            background: $red;
+                            background: $violet;
                         }
                     }
                     @include breakpoint(max, 1336px) {

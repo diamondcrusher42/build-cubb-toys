@@ -13,8 +13,8 @@
                             @include('includes.gallery-loop', ['images' => $project->images])
                         </div>
                         <div class="author-money-mobile">
-                            <div class="author"><span>Created by <strong>Adis</strong></span></div>
-                            <div class="money"><span>Money raised<strong>70.000 €</strong></span></div>
+                            <div class="author"><span>Created by <strong>{{ $project->author }}</strong></span></div>
+                            <div class="money"><span>Money raised<strong>{{ $project->money_raised }}</strong></span></div>
                         </div>
                     </div>
                     <div class="summary">
@@ -56,13 +56,13 @@
                         <p>You can fund the project in 2 ways, as a supporter, where you receive a discount for the preorder, or as an investor, where we reward you with interest and a free product.</p>
                     </div>
                     <div class="support-tiers">
-                        <div class="tier supporter" data-amount="60">
+                        <div class="tier supporter" data-amount="{{ round($project->supporter_price) }}">
                             <div class="title">Supporter</div>
                             <div class="details">
                                 <div class="text">
                                     <div class="investment-amount">
                                         <span>Preorder</span>
-                                        <span class="amount">60 €</span>
+                                        <span class="amount">{{ round($project->supporter_price) }} €</span>
                                     </div>
                                     <div class="investment-reward">
                                         <span class="bigger">50%</span>
@@ -72,8 +72,8 @@
                                 <div class="invest-button">Invest now</div>
                             </div>
                         </div>
-                        <div class="tier silver" data-amount="1000">
-                            <div class="title">Silver investor</div>
+                        <div class="tier gold" data-amount="1000">
+                            <div class="title">Gold investor</div>
                             <div class="details">
                                 <div class="text">
                                     <div class="investment-amount">
@@ -91,8 +91,8 @@
                                 <div class="invest-button">Invest now</div>
                             </div>
                         </div>
-                        <div class="tier gold" data-amount="5000">
-                            <div class="title">Gold investor</div>
+                        <div class="tier platinum" data-amount="5000">
+                            <div class="title">Platinum investor</div>
                             <div class="details">
                                 <div class="text">
                                     <div class="investment-amount">
@@ -110,8 +110,8 @@
                                 <div class="invest-button">Invest now</div>
                             </div>
                         </div>
-                        <div class="tier platinum" data-amount="10000">
-                            <div class="title">Platinum investor</div>
+                        <div class="tier diamond" data-amount="10000">
+                            <div class="title">Diamond investor</div>
                             <div class="details">
                                 <div class="text">
                                     <div class="investment-amount">
@@ -139,13 +139,13 @@
                     <div class="tab active">
                         <span class="title">Project description</span>
                         <div class="tab-content">
-                            {{ $project->description }}
+                            {!! $project->description !!}
                         </div>
                     </div>
                     <div class="tab">
                         <span class="title">Creator updates</span>
                         <div class="tab-content">
-                            {{ $project->creator_updates }}
+                            {!! $project->creator_updates !!}
                         </div>
                     </div>
                     <div class="tab" style="display: none">

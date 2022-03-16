@@ -93,7 +93,7 @@ input[type="text"] {
 .invest-button {
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.16);
     border-radius: 21px;
-    background: $violet;
+    background: $dark;
     color: #FFF;
     font-size: 16px;
     font-weight: 700;
@@ -123,4 +123,20 @@ main.subpage {
         font-size: 16px;
         line-height: 28px;
     }
+}
+
+#submit-project-link {
+    text-decoration: none;
+    color: $dark;
+    background: $yellow;
+    height: 55px;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 40px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: auto;
+    margin: 20px 0;
+    font-size: 20px;
 }

@@ -7,13 +7,43 @@ main#home {
             max-width: 100%;
         }
     }
+    section.home-banners {
+        padding-bottom: 120px;
+        .banners {
+            display: flex;
+            margin: 0 -8px;
+            .banner {
+                padding: 0 8px;
+                .image {
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+                p {
+                    text-align: center;
+                    font-weight: 700;
+                }
+            }
+        }
+        @include breakpoint(max, md) {
+            padding-bottom: 70px;
+            .banners {
+                flex-wrap: wrap;
+                .banner {
+                    flex-basis: 100%;
+                    padding-bottom: 30px;
+                }
+            }
+        }
+    }
     section.cta-boxes {
         margin-bottom: 74px;
         .cta-boxes {
             display: flex;
             margin: 0 -8px;
             .cta-box {
-                color: $dark;
+                color: #FFF;
                 margin: 0 8px;
                 padding: 25px;
                 border-radius: 8px;
@@ -61,6 +91,7 @@ main#home {
                 &.green {
                     background: $green;
                     .bg-icon {
+                        display: none;
                         background-color: #92DB9B;
                         mask: url('/img/megaphone.svg');
                         width: 200px;
@@ -73,6 +104,7 @@ main#home {
                 &.blue {
                     background: $blue;
                     .bg-icon {
+                        display: none;
                         position: absolute;
                         width: 153px;
                         height: 153px;

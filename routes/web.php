@@ -34,3 +34,6 @@ Route::get('/about-us', function () {
 Route::get('/privacy-policy', function () {
     return view('subpages.privacy-policy');
 });
+Route::get('/terms-of-service', function () {
+    return view('subpages.terms-of-service');
+});
